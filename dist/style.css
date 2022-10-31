@@ -1,0 +1,24 @@
+html {
+  font-size: 16px;
+}
+
+header {
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.card {
+  filter: drop-shadow(10px 10px 5px gray);
+}
