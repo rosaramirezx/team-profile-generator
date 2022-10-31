@@ -2,6 +2,7 @@ const { Employee } = require("../lib/classes");
 
 describe("Employee class", () => {
   const employee = new Employee("Bradley", 1, "jesterb@seattleu.edu");
+
   it("returns the name, id and email of the employee", () => {
     expect(employee._name).toBe("Bradley");
     expect(employee._id).toBe(1);
