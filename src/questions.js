@@ -45,3 +45,49 @@ const managerQuestions = [
     },
   },
 ];
+
+const engineerQuestion = [
+  {
+    type: "input",
+    message: "what's the engineer's name?",
+    name: "name",
+    validate: function (input) {
+      return typeof input === "string"
+        ? true
+        : "Please enter the engineer's name!";
+    },
+  },
+
+  {
+    type: "input",
+    message: "What's the engineer's employee ID?",
+    name: "id",
+    validate: function (id) {
+      return isNaN(parseInt(id))
+        ? "Please enter the engineer's employee ID!"
+        : true;
+    },
+  },
+
+  {
+    type: "input",
+    message: "What's the engineer's email address?",
+    name: "email",
+    validate: function (email) {
+      return (
+        /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
+          email
+        ) || "Please enter the engineer's email!"
+      );
+    },
+  },
+
+  {
+    type: "input",
+    message: "What's the engineer's GitHub username?",
+    name: "github",
+    validate: function (github) {
+      return !!github || "Please enter the engineer's GitHub username!";
+    },
+  },
+];
