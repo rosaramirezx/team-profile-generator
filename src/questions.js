@@ -1,4 +1,4 @@
-const managerQuestions = [
+const managerQuestion = [
   {
     type: "input",
     message: "What's the manager's name?",
@@ -9,7 +9,6 @@ const managerQuestions = [
         : "Please enter the manager's name!";
     },
   },
-
   {
     type: "input",
     message: "What's the manager's employee ID?",
@@ -20,12 +19,15 @@ const managerQuestions = [
         : true;
     },
   },
-
   {
     type: "input",
     message: "What's the manager's email address?",
     name: "email",
     validate: function (email) {
+      // Regex mail check (return true if valid mail)
+      // const pass = email.match(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/);
+      // if(pass){return true;}
+      // return 'Must be a valid email'
       return (
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
           email
@@ -33,23 +35,22 @@ const managerQuestions = [
       );
     },
   },
-
   {
     type: "input",
     message: "What's the manager's office number?",
     name: "office",
     validate: function (office) {
       return isNaN(parseInt(office))
-        ? "Please enter the manager's office number!"
+        ? "Please enter the manager's office number"
         : true;
     },
   },
 ];
 
-const engineerQuestions = [
+const engineerQuestion = [
   {
     type: "input",
-    message: "what's the engineer's name?",
+    message: "What's the engineer's name?",
     name: "name",
     validate: function (input) {
       return typeof input === "string"
@@ -57,7 +58,6 @@ const engineerQuestions = [
         : "Please enter the engineer's name!";
     },
   },
-
   {
     type: "input",
     message: "What's the engineer's employee ID?",
@@ -68,12 +68,12 @@ const engineerQuestions = [
         : true;
     },
   },
-
   {
     type: "input",
     message: "What's the engineer's email address?",
     name: "email",
     validate: function (email) {
+      // Regex mail check (return true if valid mail)
       return (
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
           email
@@ -81,10 +81,9 @@ const engineerQuestions = [
       );
     },
   },
-
   {
     type: "input",
-    message: "What's the engineer's GitHub username?",
+    message: "What's the engineer's Github username?",
     name: "github",
     validate: function (github) {
       return !!github || "Please enter the engineer's GitHub username!";
@@ -92,7 +91,7 @@ const engineerQuestions = [
   },
 ];
 
-const internQuestions = [
+const internQuestion = [
   {
     type: "input",
     message: "What's the intern's name?",
@@ -103,7 +102,6 @@ const internQuestions = [
         : "Please enter the intern's name!";
     },
   },
-
   {
     type: "input",
     message: "What's the intern's employee ID?",
@@ -114,12 +112,12 @@ const internQuestions = [
         : true;
     },
   },
-
   {
     type: "input",
     message: "What's the intern's email address?",
     name: "email",
     validate: function (email) {
+      // Regex mail check (return true if valid mail)
       return (
         /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/.test(
           email
@@ -127,7 +125,6 @@ const internQuestions = [
       );
     },
   },
-
   {
     type: "input",
     message: "What school does the intern attend?",
@@ -144,8 +141,8 @@ const menu = [
     name: "choice",
     message:
       "Add an engineer or intern to your team or select finished if all done!",
-    choices: ["Engineer", "Intern", "Finished"],
+    choices: ["Engineer", "Intern", "Finish"],
   },
 ];
 
-module.exports = { managerQuestions, engineerQuestions, internQuestions, menu };
+module.exports = { managerQuestion, engineerQuestion, internQuestion, menu };

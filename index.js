@@ -2,15 +2,15 @@ const inquirer = require("inquirer");
 const { Manager, Engineer, Intern } = require("./lib/classes");
 const {
   menu,
-  managerQuestions,
-  internQuestions,
-  engineerQuestions,
+  managerQuestion,
+  internQuestion,
+  engineerQuestion,
 } = require("./src/questions");
 const generateHTML = require("./src/template-helper");
 let employeeArr = [];
 
 const generateManager = async () => {
-  const managerAnswer = await inquirer.createPromptModule(managerQuestions);
+  const managerAnswer = await inquirer.prompt(managerQuestion);
   const manager = new Manager(
     managerAnswer.name,
     managerAnswer.id,
@@ -20,8 +20,8 @@ const generateManager = async () => {
   employeeArr.push(manager);
 };
 
-const promptEngineerQuestions = async () => {
-  const engineerAnswer = await inquirer.prompt(engineerQuestions);
+const promptEngineerQuestion = async () => {
+  const engineerAnswer = await inquirer.prompt(engineerQuestion);
   const engineer = new Engineer(
     engineerAnswer.name,
     engineerAnswer.id,
@@ -32,8 +32,8 @@ const promptEngineerQuestions = async () => {
   generateEmployee();
 };
 
-const promptInternQuestions = async () => {
-  const internAnswer = await inquirer.prompt(internQuestions);
+const promptInternQuestion = async () => {
+  const internAnswer = await inquirer.prompt(internQuestion);
   const intern = new Intern(
     internAnswer.name,
     internAnswer.id,
@@ -48,12 +48,12 @@ const generateEmployee = async () => {
   const role = await inquirer.prompt(menu);
   switch (role.choice) {
     case "Engineer":
-      promptEngineerQuestions();
+      promptEngineerQuestion();
       break;
     case "Intern":
-      promptInternQuestions();
+      promptInternQuestion();
       break;
-    case "Finished":
+    case "Finish":
       generateHTML(employeeArr);
       break;
     case "default":
