@@ -45,7 +45,7 @@ const promptInternQuestions = async () => {
 };
 
 const generateEmployee = async () => {
-  const role = await inquirer.promt(menu);
+  const role = await inquirer.prompt(menu);
   switch (role.choice) {
     case "Engineer":
       promptEngineerQuestions();
