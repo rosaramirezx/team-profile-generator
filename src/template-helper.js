@@ -17,8 +17,8 @@ const generateBodyBefore = () => {
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <header class="d-flex justify-content-center align-items-center bg-dark text-white">
-            <h1>My team</h1>
+        <header class="d-flex justify-content-center align-items-center">
+            <h1>My Team</h1>
         </header>
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
@@ -38,14 +38,14 @@ const generateManager = (managerData) => {
   return `
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
-            <div class="card-body bg-primary text-white">
+            <div class="card-body  ">
                 <h5 class="card-title">${managerData.getName()}</h5>
                 <p><i class="fa-solid fa-mug-hot"></i><span class="card-text pl-2">${managerData.getRole()}</span></p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${managerData.getId()}</li>
+            <ul class="list-group list-group-flush rounded-0 ">
+                <li class="list-group-item">ID: ${managerData.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto: ${managerData.getEmail()}">${managerData.getEmail()}</a></li>
-                <li class="list-group-item">Office number:${managerData.getOfficeNumber()}</li>
+                <li class="list-group-item">Office number: ${managerData.getOfficeNumber()}</li>
             </ul>
         </div>
     </div>
@@ -56,14 +56,14 @@ const generateEngineer = (engineerData) => {
   return `
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
-            <div class="card-body bg-primary text-white">
+            <div class="card-body  ">
                 <h5 class="card-title">${engineerData.getName()}</h5>
                 <p><i class="fa-solid fa-glasses"></i><span class="card-text pl-2">${engineerData.getRole()}</span></p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${engineerData.getId()}</li>
+            <ul class="list-group list-group-flush rounded-0 ">
+                <li class="list-group-item">ID: ${engineerData.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto: ${engineerData.getEmail()}">${engineerData.getEmail()}</a></li>
-                <li class="list-group-item">Github:<a href="https://github.com/${engineerData.getGithub()}">${engineerData.getGithub()}</a></li>
+                <li class="list-group-item">Github:<a href="https://github.com/${engineerData.getGithub()}"> ${engineerData.getGithub()}</a></li>
             </ul>
         </div>
     </div>
@@ -74,14 +74,14 @@ const generateIntern = (internData) => {
   return `
     <div class="col-12 col-md-4 col-lg-3 my-3 mx-1 d-flex justify-content-center align-items-center">
         <div class="card " style="width: 16rem;">
-            <div class="card-body bg-primary text-white">
+            <div class="card-body  ">
                 <h5 class="card-title">${internData.getName()}</h5>
                 <p><i class="fa-solid fa-graduation-cap"></i><span class="card-text pl-2">${internData.getRole()}</span></p>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID:${internData.getId()}</li>
-                <li class="list-group-item">Email:<a href="mailto: ${internData.getEmail()}">${internData.getEmail()}</a></li>
-                <li class="list-group-item">School:${internData.getSchool()}</li>
+            <ul class="list-group list-group-flush rounded-0 ">
+                <li class="list-group-item">ID: ${internData.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto: ${internData.getEmail()}">${internData.getEmail()}</a></li>
+                <li class="list-group-item">School: ${internData.getSchool()}</li>
             </ul>
         </div>
     </div>

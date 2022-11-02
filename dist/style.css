@@ -1,24 +1,66 @@
-html {
-  font-size: 16px;
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Questrial&family=Varela+Round&display=swap");
+
+a {
+  color: #d79f90;
+}
+
+a:hover {
+  color: #c81909;
+  opacity: 1;
+  text-decoration: none;
+}
+
+body {
+  background-color: #77524c;
+}
+
+.card {
+  background-color: transparent;
+  border: 5px solid #262425;
+  border-radius: 0;
+  filter: drop-shadow(10px 10px 20px white);
+}
+
+.card-body {
+  background-color: #c81909;
+  color: #fffefa;
 }
 
 header {
+  background-color: #d79f90;
+  border-bottom: 10px solid #c81909;
+  font-family: "Architects Daughter", cursive;
   height: 100px;
   margin-bottom: 50px;
 }
 
 h1 {
-  font-size: 2rem;
+  background-color: #d79f90;
+  color: #262425;
+  font-size: 60px;
 }
 
 h5 {
-  font-size: 1.5rem;
+  font-family: "Varela Round", sans-serif;
+  font-size: 24px;
+}
+
+li {
+  font-family: "Questrial", sans-serif;
+  font-size: 20px;
+}
+
+.list-group-item {
+  background-color: #262425;
+  border: none;
+  color: #fffefa;
 }
 
 p {
   font-size: 1.2rem;
 }
 
-.card {
-  filter: drop-shadow(10px 10px 5px gray);
+span {
+  font-family: "Varela Round", sans-serif;
+  font-size: 18px;
 }
