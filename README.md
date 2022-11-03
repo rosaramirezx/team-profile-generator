@@ -17,6 +17,9 @@ A Node.js command-line application that takes in information about employees on 
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
+    - [Sample index.html File](#sample-indexhtml-file)
+    - [Command-Line Prompts](#command-line-prompts)
+    - [Video](#video)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -33,6 +36,20 @@ A Node.js command-line application that takes in information about employees on 
 1. In the command-line terminal, navigate to the `team-profile-generator` folder if you're not there already. Then run `node index.js`. You'll be asked to enter the manager's name, employee ID, email address and office number.
 2. Next, you'll be asked if you want to add an "engineer" or "intern" to your team. If so, answer the following prompted questions.
 3. When you're all done select "finished." An `index.html` file will be created in the `dist` folder.
+
+### Sample index.html File
+
+![Sample index.html File Screenshot](assets/images/index-html-screenshot.png)
+
+### Command-Line Prompts
+
+![Terminal Screenshot](assets/images/team-profile-generator-terminal-screenshot.png)
+
+### Video
+
+Click on the video link below to learn how to use the Team Profile Generator command-line application:
+
+[Team Profile Generator Walkthrough Video](assets/video/team-profile-generator-walkthrough-video.webm)
 
 ## Contributing
 
